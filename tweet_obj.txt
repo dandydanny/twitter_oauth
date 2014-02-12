@@ -1,0 +1,35 @@
+#<OAuth::AccessToken:0x007ff8f2bd94b0
+@token="2191334952-U9W0mIvY8z8kBjMFhRvNaGIoX4tDDtfswetskRD",
+
+@secret="mtjNdtCQpHoIQjDYYDj519yuLuaU7njWMdqOSsa1H1QQW",
+
+@consumer=#<
+
+      OAuth::Consumer:0x007ff8f2bcecb8
+      @key="QQM8MmNGADqLXDx7go8bg",
+      @secret="w5bZs8b1obt7QOayIoqNpetwPQ818X90qqtIuxU2JAU",
+
+      @options={:signature_method=>"HMAC-SHA1",
+              :request_token_path=>"/oauth/request_token",
+              :authorize_path=>"/oauth/authorize",
+              :access_token_path=>"/oauth/access_token",
+              :proxy=>nil,
+              :scheme=>:header,
+              :http_method=>:post,
+              :oauth_version=>"1.0",
+              :site=>"https://api.twitter.com"},
+
+      @http_method=:post,
+
+      @http=#<Net::HTTP api.twitter.com:443 open=false>
+
+>,
+
+@params={ :oauth_token=>"2191334952-U9W0mIvY8z8kBjMFhRvNaGIoX4tDDtfswetskRD",
+         "oauth_token"=>"2191334952-U9W0mIvY8z8kBjMFhRvNaGIoX4tDDtfswetskRD",
+          :oauth_token_secret=>"mtjNdtCQpHoIQjDYYDj519yuLuaU7njWMdqOSsa1H1QQW",
+         "oauth_token_secret"=>"mtjNdtCQpHoIQjDYYDj519yuLuaU7njWMdqOSsa1H1QQW",
+          :user_id=>"2191334952",
+         "user_id"=>"2191334952",
+          :screen_name=>"devdandydanny",
+         "screen_name"=>"devdandydanny"}>
