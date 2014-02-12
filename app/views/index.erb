@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Tweet Now! 2: Multi-User</h1>
-  <p>Address bar must show localhost:9393 or O'Auth will fail.</p>
+  <p>When running locally, address bar must show localhost:9393 or OAuth redirect will fail.</p>
 
   <%
     # In our real-world application, this is not what we want. Instead, we should
@@ -8,12 +8,12 @@
     # we should show her a form that will allow her to send a tweet. If there is no
     # user logged-in, we should show the sign-in button.
   %>
-  <p>Access Token is: <%= p @access_token %></p>
   <% if @access_token %>
+  <p>Hello <%= p @access_token.params[:screen_name] %>. I think you are pretty awesome.</p>
     <div>
       <p>
-        <strong>token:</strong> <%= @access_token.token %><br>
-        <strong>secret:</strong> <%= @access_token.secret %><br>
+<!--         <strong>token:</strong> <%= @access_token.token %><br>
+        <strong>secret:</strong> <%= @access_token.secret %><br> -->
       </p>
       <p>
         <button><a href="/sign_out">Sign Out</a></button>
@@ -23,9 +23,10 @@
     <button><a href="/sign_in">Sign In with Twitter</a></button>
   <% end %>
 
-  <form id="#tweet-form" action='/tweet' method='post'>
+  <form id="tweet-form" action='/tweet' method='post'>
     <input type="text" name="tweet" placeholder="Enter tweet">
     <input type="submit" value="Tweet it!">
   </form>
+  <div id="status"></div>
 
 </div>

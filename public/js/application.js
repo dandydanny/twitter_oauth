@@ -5,8 +5,10 @@ $(document).ready(function() {
   // when we try to bind to them
   $("#tweet-form").submit(function(e) {
     e.preventDefault();
-    console.log("#text");
+    console.log("Something submitted...");
     console.log("About to do AJAX post =========");
+
+    // $("tweet").val();
     // $.post("/tweet", $("form").serialize(), function(data) {
     //   console.log(data);
     //   $("#all-good").toggle();
@@ -19,6 +21,7 @@ $(document).ready(function() {
       data: $("form").serialize(),  //tweet=zxczxc
       success: function(returnData) {
         console.log("great success!");
+        $("#status").html("<p>Tweeted!</p>")
       }
     });
   });
